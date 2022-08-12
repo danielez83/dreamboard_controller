@@ -3,6 +3,11 @@ The Arduino board is connected to a MCP23017.
 
 
 LOG:
+12/08/2022
+Functions moved to external files. 
+Selection of serial/5wires mode implemented
+Correctly run test when asked from serial mode "test\r\n"
+
 25/03/2022
 THe micro can turn on/off single pins and ports. Tested with 2 solid state relay and two solenoid valves.
 Need to export functions into a dedicated library.
@@ -22,23 +27,69 @@ const char GPIOA_ADDRESS    = 0x12;
 const char IODIRB_ADDRESS   = 0x01; 
 const char GPIOB_ADDRESS    = 0x13;
 
+const int mode_pin          = 7; // Low --> 5 wire mode, High --> Serial mode (standard)
+
+// -------- Globals
+uint8_t mode, new_mode;     // Operation mode
+String serial_command;     // Command sent through serial port
+uint8_t old_GPIOA_status, old_GPIOB_status;
+
 // -------- Functions
 void setup_I2C_line(char MCP_ADDRESS);
 void set_PORT_status(char MCP_ADDRESS, char Port, char Value);
 uint8_t read_PORT_status(char MCP_ADDRESS, char Port);
 void set_Value_on_Port_HIGH(char MCP_ADDRESS, char Port, char Value);
 void set_Value_on_Port_LOW(char MCP_ADDRESS, char Port, char Value);
+void run_test();
 
 // -------- Configuration
 void setup() {
   Serial.begin(9600);
   setup_I2C_line(0x20); //setup the I2C line
   set_PORT_status(0x20, GPIOA_ADDRESS, 0); //Set all output to zero
-  set_PORT_status(0x20, GPIOB_ADDRESS, 0); //Set all output to zero  
+  set_PORT_status(0x20, GPIOB_ADDRESS, 0); //Set all output to zero
+  // Setup digital pins
+  pinMode(mode_pin, INPUT);
+
+  // Read setup on jumper
+  mode = digitalRead(mode_pin);
+  new_mode = mode;
+  if(mode == 1) {
+    Serial.println("Serial mode");
+  }
+  else if(mode == 0){
+    Serial.println("5 wire mode");
+  }
 }
 
 // -------- Main Loop
 void loop() {
+  // Check any change in operation mode
+  new_mode = digitalRead(mode_pin);
+  if (new_mode != mode){
+    mode = new_mode;
+    if(mode == 1) {
+      Serial.println("Serial mode");
+    }
+    else if(mode == 0){
+      Serial.println("5 wire mode");
+    }
+  }
+  // Check command from serial port
+    if (Serial.available() > 0) {
+      // read the incoming byte:
+      serial_command = Serial.readString();
+      Serial.println(serial_command); //Echo
+      if(serial_command == "test\r\n"){
+        run_test();
+      }
+    }
+}
+
+void run_test(){
+  // Read current status
+  old_GPIOA_status = read_PORT_status(0x20, GPIOA_ADDRESS);
+  old_GPIOB_status = read_PORT_status(0x20, GPIOB_ADDRESS);
   set_PORT_status(0x20, GPIOA_ADDRESS, 0xFF);
   Serial.println(read_PORT_status(0x20, GPIOA_ADDRESS), DEC);
   //Serial.println("Done GPIOA UP");
@@ -52,49 +103,13 @@ void loop() {
   set_PORT_status(0x20, GPIOB_ADDRESS, 0x00);
   Serial.println(read_PORT_status(0x20, GPIOB_ADDRESS), DEC);
   delay(1000);
-}
-
-// Extra functions to export into a dedicated library later
-
-void setup_I2C_line(char MCP_ADDRESS){
-  Wire.begin();                         // wake up the I2C bus
-  Wire.beginTransmission(MCP_ADDRESS);
-  Wire.write(IODIRA_ADDRESS);           //IODIRA register
-  Wire.write(0x00);                     //Set all A ports to outputs
-  Wire.endTransmission();
-  Wire.beginTransmission(MCP_ADDRESS);
-  Wire.write(IODIRB_ADDRESS);           //IODIRB register
-  Wire.write(0x00);                     //Set all B ports to outputs
-  Wire.endTransmission();
-}
-
-void set_PORT_status(char MCP_ADDRESS, char Port, char Value){
-  Wire.beginTransmission(MCP_ADDRESS);  // Call desired MCP
-  Wire.write(Port);                     // Select specific port
-  Wire.write(Value);                    // Value to send
-  Wire.endTransmission();               // Close communications
-}
-
-void set_Value_on_Port_HIGH(char MCP_ADDRESS, char Port, char Value){
-  char curr_port_status;
-  curr_port_status = read_PORT_status(MCP_ADDRESS, Port);
-  Value = pow(2, Value);                                // Convert the pin value in binary
-  curr_port_status = curr_port_status | Value;          // Set to High
-  set_PORT_status(MCP_ADDRESS, Port, curr_port_status);
-}
-
-void set_Value_on_Port_LOW(char MCP_ADDRESS, char Port, char Value){
-  char curr_port_status;
-  curr_port_status = read_PORT_status(MCP_ADDRESS, Port);
-  Value = pow(2, Value);                                // Convert the pin value in binary
-  curr_port_status = curr_port_status & ~Value;         // Set to LOW
-  set_PORT_status(MCP_ADDRESS, Port, curr_port_status);
-}
-
-uint8_t read_PORT_status(char MCP_ADDRESS, char Port){
-  Wire.beginTransmission(MCP_ADDRESS);  // Call desired MCP
-  Wire.write(Port);                     // Select specific port
-  Wire.endTransmission();
-  Wire.requestFrom(MCP_ADDRESS, 1);     // Request one byte of data
-  return Wire.read();                   // Return port status
+  for(int i=0; i <=255;i++) {
+    set_PORT_status(0x20, GPIOA_ADDRESS, i);
+    set_PORT_status(0x20, GPIOB_ADDRESS, i);
+    delay(50);
+  }
+  delay(500);
+  // Restore previous status
+  set_PORT_status(0x20, GPIOA_ADDRESS, old_GPIOA_status);
+  set_PORT_status(0x20, GPIOB_ADDRESS, old_GPIOB_status);
 }
