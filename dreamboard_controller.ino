@@ -3,6 +3,12 @@ The Arduino board is connected to a MCP23017.
 
 
 LOG:
+13/08/2022
+Port GPIOA and GPIOB port values can be set with serial command "prt xx y zz" where:
+xx is the address of MCP port expander in hex
+y is the port (A for GPIOA, B for GPIOB)
+zz is the value of the port in hex
+
 12/08/2022
 Functions moved to external files. 
 Selection of serial/5wires mode implemented
@@ -31,8 +37,12 @@ const int mode_pin          = 7; // Low --> 5 wire mode, High --> Serial mode (s
 
 // -------- Globals
 uint8_t mode, new_mode;     // Operation mode
-String serial_command;     // Command sent through serial port
+long address, reg, value; // commands
+String serial_command, address_str, reg_str, value_str;     // Command sent through serial port
+char buff[16];
 uint8_t old_GPIOA_status, old_GPIOB_status;
+
+char *ptr; // For stroul function
 
 // -------- Functions
 void setup_I2C_line(char MCP_ADDRESS);
@@ -41,6 +51,7 @@ uint8_t read_PORT_status(char MCP_ADDRESS, char Port);
 void set_Value_on_Port_HIGH(char MCP_ADDRESS, char Port, char Value);
 void set_Value_on_Port_LOW(char MCP_ADDRESS, char Port, char Value);
 void run_test();
+void port(String);
 
 // -------- Configuration
 void setup() {
@@ -79,9 +90,13 @@ void loop() {
     if (Serial.available() > 0) {
       // read the incoming byte:
       serial_command = Serial.readString();
-      Serial.println(serial_command); //Echo
+      // run test    
       if(serial_command == "test\r\n"){
         run_test();
+      }
+      // set port to value
+      if(serial_command.substring(0, 3) == "prt"){
+        port(serial_command);
       }
     }
 }
@@ -112,4 +127,23 @@ void run_test(){
   // Restore previous status
   set_PORT_status(0x20, GPIOA_ADDRESS, old_GPIOA_status);
   set_PORT_status(0x20, GPIOB_ADDRESS, old_GPIOB_status);
+}
+
+void port(String CMD){
+        address_str = CMD.substring(4,6);
+        address_str.toCharArray(buff, 3);
+        address = strtoul(buff, &ptr, 16);
+        reg_str = CMD.substring(7,8);
+        value_str = CMD.substring(9,11);
+        value_str.toCharArray(buff, 3);
+        value = strtoul(buff, &ptr, 16);        
+        if(reg_str == "A"){
+          set_PORT_status(address, GPIOA_ADDRESS, value);
+        }
+        else if(reg_str == "B"){
+          set_PORT_status(address, GPIOB_ADDRESS, value);
+        }
+        else{
+          Serial.println("-1");
+        }
 }
