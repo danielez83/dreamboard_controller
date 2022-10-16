@@ -1,0 +1,1935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/Users/daniele/Google Drive/UiB Laboratory/Schematics/DreamBoard/DreamBoard.sch</source>
+    <date>2022 July 13, Wednesday 09:22:09</date>
+    <tool>Eeschema (5.1.8-0-10_14)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Custom Control Board</title>
+        <company>DZ</company>
+        <rev/>
+        <date>2022-01-28</date>
+        <source>DreamBoard.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/RELAY/" tstamps="/61FD4BD2/">
+      <title_block>
+        <title>Custom Control Board</title>
+        <company>DZ</company>
+        <rev/>
+        <date>2022-01-28</date>
+        <source>RELAY.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>GPA_relays.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>GPB_relays.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>Arduino_Nano_v2.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</datasheet>
+      <libsource lib="MCU_Module" part="Arduino_Nano_v2.x" description="Arduino Nano v2.x"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C49C11</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Arduino_RightSide</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x15_Row_Letter_First" description="Generic connector, double row, 02x15, row letter first pin numbering scheme (pin number consists of a letter for the row and a number for the pin index in this row. a1, ..., aN; b1, ..., bN), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D816FE</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Arduino_LeftSide</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x15_Row_Letter_First" description="Generic connector, double row, 02x15, row letter first pin numbering scheme (pin number consists of a letter for the row and a number for the pin index in this row. a1, ..., aN; b1, ..., bN), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60E91012</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61FA198D</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61FA3191</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>SolderJumper_3_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62037E64</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>I2C bus connector</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6207A5B8</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>5-W control</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6214E24F</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>External PS</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6217E9CD</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>MCP23017_SP</value>
+      <footprint>Package_DIP:DIP-28_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</datasheet>
+      <libsource lib="Interface_Expansion" part="MCP23017_SP" description="16-bit I/O expander, I2C, interrupts, w pull-ups, SPDIP-28"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FE7613</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FB53A8</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FB6C86</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FB72F0</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FC10B2</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>GPA Valves Conn</value>
+      <footprint>TerminalBlock_TE-Connectivity:1-2350513-6</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x16" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61F94DCD</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>PS Relay A</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FE4734</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FC8AC2</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>MCP ADD selector</value>
+      <footprint>Button_Switch_THT:SW_DIP_SPSTx04_Slide_9.78x12.34mm_W7.62mm_P2.54mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_DIP_x04" description="4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FC5B31</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>GPB Valves Conn</value>
+      <footprint>TerminalBlock_TE-Connectivity:1-2350513-6</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x16" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FDF349</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>PS Relay B</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>61FDF3C3</tstamp>
+    </comp>
+    <comp ref="JP2">
+      <value>Vdrive_relay Jumper</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>6212AD1F</tstamp>
+    </comp>
+    <comp ref="JP3">
+      <value>GND_relay Jumper</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
+      <sheetpath names="/RELAY/" tstamps="/61FD4BD2/"/>
+      <tstamp>6212C688</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A331</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A338</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A33E</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>GPA0</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A344</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A35F</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A375</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A37C</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A382</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>GPA1</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A388</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3A3</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3B9</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3C0</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3C6</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>GPA2</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3CC</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A3E1</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A40D</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>GPA3</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A428</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A42E</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A434</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A43B</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A441</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A448</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A44E</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>GPA4</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A454</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A46F</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A485</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A48C</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A492</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>GPA5</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A498</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4B3</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4C9</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4D0</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4D6</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>GPA6</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4DC</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A4F1</tstamp>
+    </comp>
+    <comp ref="D16">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A51D</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>GPA7</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A538</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A53E</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A544</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPA_relays/" tstamps="/61FD4BD2/620FC519/"/>
+      <tstamp>6213A54B</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039AFD</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B03</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B09</tstamp>
+    </comp>
+    <comp ref="D17">
+      <value>GPB0</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B0F</tstamp>
+    </comp>
+    <comp ref="D21">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B2A</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B39</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B3F</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B45</tstamp>
+    </comp>
+    <comp ref="D18">
+      <value>GPB1</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B4B</tstamp>
+    </comp>
+    <comp ref="D22">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B66</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B75</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B7B</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B81</tstamp>
+    </comp>
+    <comp ref="D19">
+      <value>GPB2</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B87</tstamp>
+    </comp>
+    <comp ref="D23">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039B9C</tstamp>
+    </comp>
+    <comp ref="D24">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BB8</tstamp>
+    </comp>
+    <comp ref="D20">
+      <value>GPB3</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BD3</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BD9</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BDF</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BE5</tstamp>
+    </comp>
+    <comp ref="U14">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BEB</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BF1</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BF7</tstamp>
+    </comp>
+    <comp ref="D25">
+      <value>GPB4</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039BFD</tstamp>
+    </comp>
+    <comp ref="D29">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C18</tstamp>
+    </comp>
+    <comp ref="U15">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C26</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C2C</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C32</tstamp>
+    </comp>
+    <comp ref="D26">
+      <value>GPB5</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C38</tstamp>
+    </comp>
+    <comp ref="D30">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C53</tstamp>
+    </comp>
+    <comp ref="U16">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C61</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C67</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C6D</tstamp>
+    </comp>
+    <comp ref="D27">
+      <value>GPB6</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C73</tstamp>
+    </comp>
+    <comp ref="D31">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039C88</tstamp>
+    </comp>
+    <comp ref="D32">
+      <value>1N4005</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4005" description="600V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039CA4</tstamp>
+    </comp>
+    <comp ref="D28">
+      <value>GPB7</value>
+      <footprint>LED_THT:LED_D4.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039CBF</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039CC5</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>680</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039CCB</tstamp>
+    </comp>
+    <comp ref="U17">
+      <value>AQV252G</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="Transistor_FET" part="AQV252G" description=""/>
+      <sheetpath names="/RELAY/GPB_relays/" tstamps="/61FD4BD2/61FEACD2/"/>
+      <tstamp>62039CD1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x16">
+      <description>Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x15_Row_Letter_First">
+      <description>Generic connector, double row, 02x15, row letter first pin numbering scheme (pin number consists of a letter for the row and a number for the pin index in this row. a1, ..., aN; b1, ..., bN), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x15_Row_Letter_First</field>
+      </fields>
+      <pins>
+        <pin num="a1" name="Pin_a1" type="passive"/>
+        <pin num="a2" name="Pin_a2" type="passive"/>
+        <pin num="a3" name="Pin_a3" type="passive"/>
+        <pin num="a4" name="Pin_a4" type="passive"/>
+        <pin num="a5" name="Pin_a5" type="passive"/>
+        <pin num="a6" name="Pin_a6" type="passive"/>
+        <pin num="a7" name="Pin_a7" type="passive"/>
+        <pin num="a8" name="Pin_a8" type="passive"/>
+        <pin num="a9" name="Pin_a9" type="passive"/>
+        <pin num="a10" name="Pin_a10" type="passive"/>
+        <pin num="a11" name="Pin_a11" type="passive"/>
+        <pin num="a12" name="Pin_a12" type="passive"/>
+        <pin num="a13" name="Pin_a13" type="passive"/>
+        <pin num="a14" name="Pin_a14" type="passive"/>
+        <pin num="a15" name="Pin_a15" type="passive"/>
+        <pin num="b1" name="Pin_b1" type="passive"/>
+        <pin num="b2" name="Pin_b2" type="passive"/>
+        <pin num="b3" name="Pin_b3" type="passive"/>
+        <pin num="b4" name="Pin_b4" type="passive"/>
+        <pin num="b5" name="Pin_b5" type="passive"/>
+        <pin num="b6" name="Pin_b6" type="passive"/>
+        <pin num="b7" name="Pin_b7" type="passive"/>
+        <pin num="b8" name="Pin_b8" type="passive"/>
+        <pin num="b9" name="Pin_b9" type="passive"/>
+        <pin num="b10" name="Pin_b10" type="passive"/>
+        <pin num="b11" name="Pin_b11" type="passive"/>
+        <pin num="b12" name="Pin_b12" type="passive"/>
+        <pin num="b13" name="Pin_b13" type="passive"/>
+        <pin num="b14" name="Pin_b14" type="passive"/>
+        <pin num="b15" name="Pin_b15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4001">
+      <aliases>
+        <alias>1N4002</alias>
+        <alias>1N4003</alias>
+        <alias>1N4004</alias>
+        <alias>1N4005</alias>
+        <alias>1N4006</alias>
+        <alias>1N4007</alias>
+        <alias>BA157</alias>
+        <alias>BA158</alias>
+        <alias>BA159</alias>
+      </aliases>
+      <description>50V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_Expansion" part="MCP23017_SP">
+      <description>16-bit I/O expander, I2C, interrupts, w pull-ups, SPDIP-28</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP23017_SP</field>
+        <field name="Footprint">Package_DIP:DIP-28_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GPB0" type="BiDi"/>
+        <pin num="2" name="GPB1" type="BiDi"/>
+        <pin num="3" name="GPB2" type="BiDi"/>
+        <pin num="4" name="GPB3" type="BiDi"/>
+        <pin num="5" name="GPB4" type="BiDi"/>
+        <pin num="6" name="GPB5" type="BiDi"/>
+        <pin num="7" name="GPB6" type="BiDi"/>
+        <pin num="8" name="GPB7" type="BiDi"/>
+        <pin num="9" name="VDD" type="power_in"/>
+        <pin num="10" name="VSS" type="power_in"/>
+        <pin num="11" name="NC" type="NotConnected"/>
+        <pin num="12" name="SCK" type="input"/>
+        <pin num="13" name="SDA" type="BiDi"/>
+        <pin num="14" name="NC" type="NotConnected"/>
+        <pin num="15" name="A0" type="input"/>
+        <pin num="16" name="A1" type="input"/>
+        <pin num="17" name="A2" type="input"/>
+        <pin num="18" name="~RESET~" type="input"/>
+        <pin num="19" name="INTB" type="3state"/>
+        <pin num="20" name="INTA" type="3state"/>
+        <pin num="21" name="GPA0" type="BiDi"/>
+        <pin num="22" name="GPA1" type="BiDi"/>
+        <pin num="23" name="GPA2" type="BiDi"/>
+        <pin num="24" name="GPA3" type="BiDi"/>
+        <pin num="25" name="GPA4" type="BiDi"/>
+        <pin num="26" name="GPA5" type="BiDi"/>
+        <pin num="27" name="GPA6" type="BiDi"/>
+        <pin num="28" name="GPA7" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_2_Open">
+      <description>Solder Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_2_Open</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Open">
+      <description>Solder Jumper, 3-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Open</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="input"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_Nano_v2.x">
+      <aliases>
+        <alias>Arduino_Nano_v3.x</alias>
+      </aliases>
+      <description>Arduino Nano v2.x</description>
+      <docs>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Nano_v2.x</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="BiDi"/>
+        <pin num="2" name="D0/RX" type="BiDi"/>
+        <pin num="3" name="~RESET" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="BiDi"/>
+        <pin num="6" name="D3" type="BiDi"/>
+        <pin num="7" name="D4" type="BiDi"/>
+        <pin num="8" name="D5" type="BiDi"/>
+        <pin num="9" name="D6" type="BiDi"/>
+        <pin num="10" name="D7" type="BiDi"/>
+        <pin num="11" name="D8" type="BiDi"/>
+        <pin num="12" name="D9" type="BiDi"/>
+        <pin num="13" name="D10" type="BiDi"/>
+        <pin num="14" name="D11" type="BiDi"/>
+        <pin num="15" name="D12" type="BiDi"/>
+        <pin num="16" name="D13" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="BiDi"/>
+        <pin num="20" name="A1" type="BiDi"/>
+        <pin num="21" name="A2" type="BiDi"/>
+        <pin num="22" name="A3" type="BiDi"/>
+        <pin num="23" name="A4" type="BiDi"/>
+        <pin num="24" name="A5" type="BiDi"/>
+        <pin num="25" name="A6" type="BiDi"/>
+        <pin num="26" name="A7" type="BiDi"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="~RESET" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_DIP_x04">
+      <description>4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SW?DIP?x4*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_DIP_x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="AQV252G">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AQV252G</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LED_Anode" type="input"/>
+        <pin num="2" name="LED_Cathode" type="input"/>
+        <pin num="3" name="NC" type="input"/>
+        <pin num="4" name="Vin2_out" type="output"/>
+        <pin num="5" name="Vgnd_out" type="output"/>
+        <pin num="6" name="Vin1_out" type="output"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Library/Application Support/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Library/Application Support/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/Library/Application Support/kicad/library/Diode.lib</uri>
+    </library>
+    <library logical="Interface_Expansion">
+      <uri>/Library/Application Support/kicad/library/Interface_Expansion.lib</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/Library/Application Support/kicad/library/Jumper.lib</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>/Library/Application Support/kicad/library/MCU_Module.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/Library/Application Support/kicad/library/Switch.lib</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/Library/Application Support/kicad/library/Transistor_FET.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/D1">
+      <node ref="A1" pin="1"/>
+      <node ref="J3" pin="b1"/>
+      <node ref="J3" pin="a1"/>
+    </net>
+    <net code="2" name="/D8">
+      <node ref="J3" pin="a11"/>
+      <node ref="J3" pin="b11"/>
+      <node ref="A1" pin="11"/>
+    </net>
+    <net code="3" name="/D9">
+      <node ref="J3" pin="a12"/>
+      <node ref="A1" pin="12"/>
+      <node ref="J3" pin="b12"/>
+    </net>
+    <net code="4" name="/D10">
+      <node ref="J3" pin="b13"/>
+      <node ref="A1" pin="13"/>
+      <node ref="J3" pin="a13"/>
+    </net>
+    <net code="5" name="/D11">
+      <node ref="J3" pin="b14"/>
+      <node ref="A1" pin="14"/>
+      <node ref="J3" pin="a14"/>
+    </net>
+    <net code="6" name="/D12">
+      <node ref="A1" pin="15"/>
+      <node ref="J3" pin="a15"/>
+      <node ref="J3" pin="b15"/>
+    </net>
+    <net code="7" name="/D13">
+      <node ref="J1" pin="b1"/>
+      <node ref="A1" pin="16"/>
+      <node ref="J1" pin="a1"/>
+    </net>
+    <net code="8" name="/AREF">
+      <node ref="A1" pin="18"/>
+      <node ref="J1" pin="a3"/>
+      <node ref="J1" pin="b3"/>
+    </net>
+    <net code="9" name="/A0">
+      <node ref="J1" pin="b4"/>
+      <node ref="A1" pin="19"/>
+      <node ref="J1" pin="a4"/>
+    </net>
+    <net code="10" name="/D0">
+      <node ref="J3" pin="a2"/>
+      <node ref="J3" pin="b2"/>
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="11" name="/A1">
+      <node ref="J1" pin="b5"/>
+      <node ref="J1" pin="a5"/>
+      <node ref="A1" pin="20"/>
+    </net>
+    <net code="12" name="/A2">
+      <node ref="J1" pin="a6"/>
+      <node ref="A1" pin="21"/>
+      <node ref="J1" pin="b6"/>
+    </net>
+    <net code="13" name="/A3">
+      <node ref="A1" pin="22"/>
+      <node ref="J1" pin="b7"/>
+      <node ref="J1" pin="a7"/>
+    </net>
+    <net code="14" name="/A6">
+      <node ref="J1" pin="b10"/>
+      <node ref="A1" pin="25"/>
+      <node ref="J1" pin="a10"/>
+    </net>
+    <net code="15" name="/A7">
+      <node ref="J1" pin="b11"/>
+      <node ref="A1" pin="26"/>
+      <node ref="J1" pin="a11"/>
+    </net>
+    <net code="16" name="/RESET">
+      <node ref="J1" pin="a13"/>
+      <node ref="A1" pin="3"/>
+      <node ref="J3" pin="a3"/>
+      <node ref="J3" pin="b3"/>
+      <node ref="J1" pin="b13"/>
+      <node ref="A1" pin="28"/>
+    </net>
+    <net code="17" name="GND">
+      <node ref="J3" pin="b4"/>
+      <node ref="R3" pin="2"/>
+      <node ref="J3" pin="a4"/>
+      <node ref="U2" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="U3" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="U17" pin="2"/>
+      <node ref="D28" pin="1"/>
+      <node ref="D27" pin="1"/>
+      <node ref="U16" pin="2"/>
+      <node ref="U4" pin="2"/>
+      <node ref="D3" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="D26" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U15" pin="2"/>
+      <node ref="D25" pin="1"/>
+      <node ref="J1" pin="a14"/>
+      <node ref="U14" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="U5" pin="2"/>
+      <node ref="U13" pin="2"/>
+      <node ref="D20" pin="1"/>
+      <node ref="U6" pin="2"/>
+      <node ref="J1" pin="b14"/>
+      <node ref="D9" pin="1"/>
+      <node ref="A1" pin="4"/>
+      <node ref="A1" pin="29"/>
+      <node ref="U7" pin="2"/>
+      <node ref="D10" pin="1"/>
+      <node ref="U8" pin="2"/>
+      <node ref="D11" pin="1"/>
+      <node ref="JP1" pin="3"/>
+      <node ref="D12" pin="1"/>
+      <node ref="U9" pin="2"/>
+      <node ref="U10" pin="2"/>
+      <node ref="U1" pin="10"/>
+      <node ref="D17" pin="1"/>
+      <node ref="U11" pin="2"/>
+      <node ref="D18" pin="1"/>
+      <node ref="J4" pin="4"/>
+      <node ref="J2" pin="6"/>
+      <node ref="J5" pin="1"/>
+      <node ref="U12" pin="2"/>
+      <node ref="D19" pin="1"/>
+    </net>
+    <net code="18" name="/D2">
+      <node ref="J2" pin="5"/>
+      <node ref="J3" pin="b5"/>
+      <node ref="J3" pin="a5"/>
+      <node ref="A1" pin="5"/>
+    </net>
+    <net code="19" name="/D3">
+      <node ref="J2" pin="4"/>
+      <node ref="J3" pin="b6"/>
+      <node ref="J3" pin="a6"/>
+      <node ref="A1" pin="6"/>
+    </net>
+    <net code="20" name="/D4">
+      <node ref="A1" pin="7"/>
+      <node ref="J3" pin="b7"/>
+      <node ref="J3" pin="a7"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="21" name="/D5">
+      <node ref="J3" pin="a8"/>
+      <node ref="J2" pin="2"/>
+      <node ref="J3" pin="b8"/>
+      <node ref="A1" pin="8"/>
+    </net>
+    <net code="22" name="/D6">
+      <node ref="A1" pin="9"/>
+      <node ref="J2" pin="1"/>
+      <node ref="J3" pin="a9"/>
+      <node ref="J3" pin="b9"/>
+    </net>
+    <net code="23" name="+3V3">
+      <node ref="A1" pin="17"/>
+      <node ref="J1" pin="b2"/>
+      <node ref="J1" pin="a2"/>
+    </net>
+    <net code="24" name="+5V">
+      <node ref="C1" pin="2"/>
+      <node ref="SW1" pin="5"/>
+      <node ref="SW1" pin="6"/>
+      <node ref="SW1" pin="7"/>
+      <node ref="SW1" pin="8"/>
+      <node ref="R1" pin="1"/>
+      <node ref="JP1" pin="1"/>
+      <node ref="A1" pin="27"/>
+      <node ref="U1" pin="9"/>
+      <node ref="R2" pin="1"/>
+      <node ref="J1" pin="b12"/>
+      <node ref="J1" pin="a12"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="25" name="VDD">
+      <node ref="J1" pin="a15"/>
+      <node ref="J1" pin="b15"/>
+      <node ref="A1" pin="30"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="26" name="/D7">
+      <node ref="A1" pin="10"/>
+      <node ref="J3" pin="a10"/>
+      <node ref="JP1" pin="2"/>
+      <node ref="J3" pin="b10"/>
+    </net>
+    <net code="27" name="SDA">
+      <node ref="J4" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="A1" pin="23"/>
+      <node ref="J1" pin="b8"/>
+      <node ref="U1" pin="13"/>
+      <node ref="J1" pin="a8"/>
+    </net>
+    <net code="28" name="SCL">
+      <node ref="J1" pin="b9"/>
+      <node ref="U1" pin="12"/>
+      <node ref="J1" pin="a9"/>
+      <node ref="R2" pin="2"/>
+      <node ref="J4" pin="3"/>
+      <node ref="A1" pin="24"/>
+    </net>
+    <net code="29" name="GPB0">
+      <node ref="R27" pin="2"/>
+      <node ref="R23" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad14)">
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="32" name="Net-(R6-Pad1)">
+      <node ref="SW1" pin="1"/>
+      <node ref="U1" pin="15"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="33" name="Net-(R5-Pad1)">
+      <node ref="SW1" pin="2"/>
+      <node ref="U1" pin="16"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="34" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="35" name="GPB1">
+      <node ref="U1" pin="2"/>
+      <node ref="R24" pin="1"/>
+      <node ref="R28" pin="2"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="37" name="GPA0">
+      <node ref="U1" pin="21"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="38" name="GPA1">
+      <node ref="R12" pin="2"/>
+      <node ref="R8" pin="1"/>
+      <node ref="U1" pin="22"/>
+    </net>
+    <net code="39" name="GPA2">
+      <node ref="U1" pin="23"/>
+      <node ref="R9" pin="1"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="40" name="GPA3">
+      <node ref="R14" pin="2"/>
+      <node ref="R10" pin="1"/>
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="41" name="GPA4">
+      <node ref="U1" pin="25"/>
+      <node ref="R19" pin="2"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="42" name="GPA5">
+      <node ref="U1" pin="26"/>
+      <node ref="R20" pin="2"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="43" name="GPA6">
+      <node ref="U1" pin="27"/>
+      <node ref="R21" pin="2"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="44" name="GPA7">
+      <node ref="U1" pin="28"/>
+      <node ref="R22" pin="2"/>
+      <node ref="R18" pin="1"/>
+    </net>
+    <net code="45" name="GPB2">
+      <node ref="R29" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R25" pin="1"/>
+    </net>
+    <net code="46" name="GPB3">
+      <node ref="R30" pin="2"/>
+      <node ref="R26" pin="1"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="47" name="GPB4">
+      <node ref="R35" pin="2"/>
+      <node ref="R31" pin="1"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="48" name="GPB5">
+      <node ref="U1" pin="6"/>
+      <node ref="R36" pin="2"/>
+      <node ref="R32" pin="1"/>
+    </net>
+    <net code="49" name="GPB6">
+      <node ref="R37" pin="2"/>
+      <node ref="R33" pin="1"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="50" name="GPB7">
+      <node ref="R38" pin="2"/>
+      <node ref="R34" pin="1"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="51" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="U1" pin="17"/>
+      <node ref="SW1" pin="3"/>
+    </net>
+    <net code="52" name="Valve_GPA0">
+      <node ref="J7" pin="1"/>
+      <node ref="U2" pin="6"/>
+      <node ref="D5" pin="2"/>
+    </net>
+    <net code="53" name="Valve_GPA1">
+      <node ref="U3" pin="6"/>
+      <node ref="D6" pin="2"/>
+      <node ref="J7" pin="3"/>
+    </net>
+    <net code="54" name="Valve_GPA2">
+      <node ref="D7" pin="2"/>
+      <node ref="J7" pin="5"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="55" name="Valve_GPA3">
+      <node ref="J7" pin="7"/>
+      <node ref="D8" pin="2"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="56" name="Valve_GPA4">
+      <node ref="J7" pin="9"/>
+      <node ref="U6" pin="6"/>
+      <node ref="D13" pin="2"/>
+    </net>
+    <net code="57" name="Valve_GPA5">
+      <node ref="J7" pin="11"/>
+      <node ref="D14" pin="2"/>
+      <node ref="U7" pin="6"/>
+    </net>
+    <net code="58" name="Valve_GPA6">
+      <node ref="U8" pin="6"/>
+      <node ref="J7" pin="13"/>
+      <node ref="D15" pin="2"/>
+    </net>
+    <net code="59" name="Valve_GPA7">
+      <node ref="D16" pin="2"/>
+      <node ref="J7" pin="15"/>
+      <node ref="U9" pin="6"/>
+    </net>
+    <net code="60" name="Vdrive_A">
+      <node ref="J7" pin="10"/>
+      <node ref="J7" pin="8"/>
+      <node ref="D15" pin="1"/>
+      <node ref="J6" pin="1"/>
+      <node ref="JP2" pin="1"/>
+      <node ref="D13" pin="1"/>
+      <node ref="J7" pin="4"/>
+      <node ref="D6" pin="1"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J7" pin="16"/>
+      <node ref="D14" pin="1"/>
+      <node ref="J7" pin="14"/>
+      <node ref="D5" pin="1"/>
+      <node ref="D16" pin="1"/>
+      <node ref="J7" pin="12"/>
+      <node ref="D8" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="J7" pin="6"/>
+    </net>
+    <net code="61" name="GND_A">
+      <node ref="U3" pin="5"/>
+      <node ref="U2" pin="5"/>
+      <node ref="JP3" pin="1"/>
+      <node ref="J6" pin="2"/>
+      <node ref="U9" pin="5"/>
+      <node ref="U7" pin="5"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U8" pin="5"/>
+      <node ref="U4" pin="5"/>
+      <node ref="U6" pin="5"/>
+    </net>
+    <net code="62" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1"/>
+      <node ref="U1" pin="18"/>
+      <node ref="SW1" pin="4"/>
+    </net>
+    <net code="63" name="Valve_GPB5">
+      <node ref="U15" pin="6"/>
+      <node ref="D30" pin="2"/>
+      <node ref="J9" pin="11"/>
+    </net>
+    <net code="64" name="Valve_GPB0">
+      <node ref="U10" pin="6"/>
+      <node ref="D21" pin="2"/>
+      <node ref="J9" pin="1"/>
+    </net>
+    <net code="65" name="Valve_GPB1">
+      <node ref="D22" pin="2"/>
+      <node ref="J9" pin="3"/>
+      <node ref="U11" pin="6"/>
+    </net>
+    <net code="66" name="Valve_GPB2">
+      <node ref="D23" pin="2"/>
+      <node ref="U12" pin="6"/>
+      <node ref="J9" pin="5"/>
+    </net>
+    <net code="67" name="Valve_GPB3">
+      <node ref="U13" pin="6"/>
+      <node ref="J9" pin="7"/>
+      <node ref="D24" pin="2"/>
+    </net>
+    <net code="68" name="Valve_GPB4">
+      <node ref="D29" pin="2"/>
+      <node ref="U14" pin="6"/>
+      <node ref="J9" pin="9"/>
+    </net>
+    <net code="69" name="Valve_GPB6">
+      <node ref="D31" pin="2"/>
+      <node ref="J9" pin="13"/>
+      <node ref="U16" pin="6"/>
+    </net>
+    <net code="70" name="Valve_GPB7">
+      <node ref="J9" pin="15"/>
+      <node ref="U17" pin="6"/>
+      <node ref="D32" pin="2"/>
+    </net>
+    <net code="71" name="Vdrive_B">
+      <node ref="D21" pin="1"/>
+      <node ref="D29" pin="1"/>
+      <node ref="D24" pin="1"/>
+      <node ref="D23" pin="1"/>
+      <node ref="D30" pin="1"/>
+      <node ref="D22" pin="1"/>
+      <node ref="JP2" pin="2"/>
+      <node ref="J9" pin="10"/>
+      <node ref="J9" pin="12"/>
+      <node ref="J9" pin="14"/>
+      <node ref="J9" pin="16"/>
+      <node ref="J9" pin="2"/>
+      <node ref="J9" pin="4"/>
+      <node ref="J9" pin="6"/>
+      <node ref="J9" pin="8"/>
+      <node ref="J8" pin="1"/>
+      <node ref="D31" pin="1"/>
+      <node ref="D32" pin="1"/>
+    </net>
+    <net code="72" name="GND_B">
+      <node ref="U14" pin="5"/>
+      <node ref="U12" pin="5"/>
+      <node ref="U10" pin="5"/>
+      <node ref="U16" pin="5"/>
+      <node ref="JP3" pin="2"/>
+      <node ref="U13" pin="5"/>
+      <node ref="U11" pin="5"/>
+      <node ref="U17" pin="5"/>
+      <node ref="U15" pin="5"/>
+      <node ref="J8" pin="2"/>
+    </net>
+    <net code="73" name="Net-(U17-Pad4)">
+      <node ref="U17" pin="4"/>
+    </net>
+    <net code="74" name="Net-(U17-Pad3)">
+      <node ref="U17" pin="3"/>
+    </net>
+    <net code="75" name="Net-(R38-Pad1)">
+      <node ref="R38" pin="1"/>
+      <node ref="U17" pin="1"/>
+    </net>
+    <net code="76" name="Net-(D28-Pad2)">
+      <node ref="R34" pin="2"/>
+      <node ref="D28" pin="2"/>
+    </net>
+    <net code="77" name="Net-(U16-Pad3)">
+      <node ref="U16" pin="3"/>
+    </net>
+    <net code="78" name="Net-(U16-Pad4)">
+      <node ref="U16" pin="4"/>
+    </net>
+    <net code="79" name="Net-(D27-Pad2)">
+      <node ref="R33" pin="2"/>
+      <node ref="D27" pin="2"/>
+    </net>
+    <net code="80" name="Net-(R37-Pad1)">
+      <node ref="U16" pin="1"/>
+      <node ref="R37" pin="1"/>
+    </net>
+    <net code="81" name="Net-(U15-Pad3)">
+      <node ref="U15" pin="3"/>
+    </net>
+    <net code="82" name="Net-(U15-Pad4)">
+      <node ref="U15" pin="4"/>
+    </net>
+    <net code="83" name="Net-(D26-Pad2)">
+      <node ref="R32" pin="2"/>
+      <node ref="D26" pin="2"/>
+    </net>
+    <net code="84" name="Net-(R36-Pad1)">
+      <node ref="R36" pin="1"/>
+      <node ref="U15" pin="1"/>
+    </net>
+    <net code="85" name="Net-(U14-Pad3)">
+      <node ref="U14" pin="3"/>
+    </net>
+    <net code="86" name="Net-(U14-Pad4)">
+      <node ref="U14" pin="4"/>
+    </net>
+    <net code="87" name="Net-(D25-Pad2)">
+      <node ref="R31" pin="2"/>
+      <node ref="D25" pin="2"/>
+    </net>
+    <net code="88" name="Net-(R35-Pad1)">
+      <node ref="U14" pin="1"/>
+      <node ref="R35" pin="1"/>
+    </net>
+    <net code="89" name="Net-(U13-Pad4)">
+      <node ref="U13" pin="4"/>
+    </net>
+    <net code="90" name="Net-(U13-Pad3)">
+      <node ref="U13" pin="3"/>
+    </net>
+    <net code="91" name="Net-(R30-Pad1)">
+      <node ref="U13" pin="1"/>
+      <node ref="R30" pin="1"/>
+    </net>
+    <net code="92" name="Net-(D20-Pad2)">
+      <node ref="R26" pin="2"/>
+      <node ref="D20" pin="2"/>
+    </net>
+    <net code="93" name="Net-(U12-Pad3)">
+      <node ref="U12" pin="3"/>
+    </net>
+    <net code="94" name="Net-(U12-Pad4)">
+      <node ref="U12" pin="4"/>
+    </net>
+    <net code="95" name="Net-(D19-Pad2)">
+      <node ref="R25" pin="2"/>
+      <node ref="D19" pin="2"/>
+    </net>
+    <net code="96" name="Net-(R29-Pad1)">
+      <node ref="R29" pin="1"/>
+      <node ref="U12" pin="1"/>
+    </net>
+    <net code="97" name="Net-(U11-Pad3)">
+      <node ref="U11" pin="3"/>
+    </net>
+    <net code="98" name="Net-(U11-Pad4)">
+      <node ref="U11" pin="4"/>
+    </net>
+    <net code="99" name="Net-(D18-Pad2)">
+      <node ref="R24" pin="2"/>
+      <node ref="D18" pin="2"/>
+    </net>
+    <net code="100" name="Net-(R28-Pad1)">
+      <node ref="R28" pin="1"/>
+      <node ref="U11" pin="1"/>
+    </net>
+    <net code="101" name="Net-(U10-Pad3)">
+      <node ref="U10" pin="3"/>
+    </net>
+    <net code="102" name="Net-(U10-Pad4)">
+      <node ref="U10" pin="4"/>
+    </net>
+    <net code="103" name="Net-(D17-Pad2)">
+      <node ref="D17" pin="2"/>
+      <node ref="R23" pin="2"/>
+    </net>
+    <net code="104" name="Net-(R27-Pad1)">
+      <node ref="U10" pin="1"/>
+      <node ref="R27" pin="1"/>
+    </net>
+    <net code="105" name="Net-(U9-Pad4)">
+      <node ref="U9" pin="4"/>
+    </net>
+    <net code="106" name="Net-(U9-Pad3)">
+      <node ref="U9" pin="3"/>
+    </net>
+    <net code="107" name="Net-(R22-Pad1)">
+      <node ref="R22" pin="1"/>
+      <node ref="U9" pin="1"/>
+    </net>
+    <net code="108" name="Net-(D12-Pad2)">
+      <node ref="R18" pin="2"/>
+      <node ref="D12" pin="2"/>
+    </net>
+    <net code="109" name="Net-(U8-Pad3)">
+      <node ref="U8" pin="3"/>
+    </net>
+    <net code="110" name="Net-(U8-Pad4)">
+      <node ref="U8" pin="4"/>
+    </net>
+    <net code="111" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="112" name="Net-(R21-Pad1)">
+      <node ref="R21" pin="1"/>
+      <node ref="U8" pin="1"/>
+    </net>
+    <net code="113" name="Net-(U7-Pad3)">
+      <node ref="U7" pin="3"/>
+    </net>
+    <net code="114" name="Net-(U7-Pad4)">
+      <node ref="U7" pin="4"/>
+    </net>
+    <net code="115" name="Net-(D10-Pad2)">
+      <node ref="R16" pin="2"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="116" name="Net-(R20-Pad1)">
+      <node ref="U7" pin="1"/>
+      <node ref="R20" pin="1"/>
+    </net>
+    <net code="117" name="Net-(U6-Pad3)">
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="118" name="Net-(U6-Pad4)">
+      <node ref="U6" pin="4"/>
+    </net>
+    <net code="119" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="120" name="Net-(R19-Pad1)">
+      <node ref="R19" pin="1"/>
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="121" name="Net-(U5-Pad4)">
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="122" name="Net-(U5-Pad3)">
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="123" name="Net-(R14-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="124" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="125" name="Net-(U4-Pad3)">
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="126" name="Net-(U4-Pad4)">
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="127" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="128" name="Net-(R13-Pad1)">
+      <node ref="U4" pin="1"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="129" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="130" name="Net-(U3-Pad4)">
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="131" name="Net-(D2-Pad2)">
+      <node ref="R8" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="132" name="Net-(R12-Pad1)">
+      <node ref="U3" pin="1"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="133" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="134" name="Net-(U2-Pad4)">
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="135" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="136" name="Net-(R11-Pad1)">
+      <node ref="R11" pin="1"/>
+      <node ref="U2" pin="1"/>
+    </net>
+  </nets>
+</export>
