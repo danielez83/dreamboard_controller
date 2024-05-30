@@ -68,6 +68,14 @@ void setup() {
   setup_I2C_line(0x20); //setup the I2C line
   set_PORT_status(0x20, GPIOA_ADDRESS, 0); //Set all output to zero
   set_PORT_status(0x20, GPIOB_ADDRESS, 0); //Set all output to zero
+  //If you have more than one board connected with address different from 0x20
+  //you should enable them like this
+  /*
+  // Extra board with 0x21 address
+  setup_I2C_line(0x21); //setup the I2C line
+  set_PORT_status(0x21, GPIOA_ADDRESS, 0); //Set all output to zero
+  set_PORT_status(0x21, GPIOB_ADDRESS, 0); //Set all output to zero
+  */
   // Setup digital pins
   pinMode(mode_pin, INPUT);
 
